@@ -14,6 +14,7 @@ def readme(file_name):
 setup(
     name="nb_black",
     version="1.0.7",
+    python_requires=">=3.6",
     description="A simple extension for Jupyter Notebook and Jupyter Lab to beautify Python code automatically using Black.",
     long_description=readme(file_name="README.md"),
     long_description_content_type="text/markdown",
@@ -25,8 +26,7 @@ setup(
     py_modules=["nb_black", "lab_black"],
     zip_safe=False,
     install_requires=[
-        "yapf >= 0.28; python_version < '3.6'",
-        "black >= 19.3; python_version >= '3.6'",
+        "black >= 19.3",
         "ipython",
     ],
     classifiers=[
@@ -34,7 +34,6 @@ setup(
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 3",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
